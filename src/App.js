@@ -59,10 +59,10 @@ const EllensFirmenIdeen = () => {
       <div className='relative'>
         <div
           ref={wheelRef}
-          className='w-72 h-72 md:w-96 md:h-96 border-4 border-gray-400 rounded-full overflow-hidden'
+          className='w-72 h-72 md:w-96 md:h-96 border-4 border-gray-400 rounded-full overflow-hidden flex items-center justify-center'
           style={{ transition: '4s ease-out' }}
         >
-          <img src='/images/wheel.png' alt='Glücksrad' className='w-full h-full' style={{ transformOrigin: '50% 50%' }} />
+          <img src='/images/wheel.png' alt='Glücksrad' className='w-full h-full object-cover' style={{ transformOrigin: 'center center' }} />
         </div>
         <div className='absolute top-[50%] left-[50%] w-0 h-0 border-l-[10px] border-l-transparent border-b-[20px] border-b-red-600 transform -translate-x-1/2 -translate-y-full'></div>
       </div>
