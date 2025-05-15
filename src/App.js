@@ -2,27 +2,26 @@ import React, { useState } from 'react';
 import { Button } from './components/ui/button';
 
 const ideas = [
-  'Mobile Tierphysio',
-  'Online-Kurse für Tierhalter',
-  'Physio-Workshops für Hunde',
-  'Reha-Zentrum für Pferde',
-  'Ergonomische Tiermöbel',
-  'Aquatherapie für Haustiere',
-  'Tiermassage und Entspannung',
-  'Gesundheits-Coaching für Tierhalter',
-  'Therapiezentren für Kleintiere',
-  'Mobile Reha-Services für Haustiere',
-  'Physiotherapeutische Geräte für den Heimgebrauch',
-  'Digitale Physiotherapie-Beratung',
-  'Pfoten-Massagezentren',
-  'Physiotherapie für ältere Tiere',
-  'Physio-Workshops speziell für Welpen',
-  'Kursangebote für Tierärzte',
-  'Zusatzversicherungen für Tierphysiotherapie',
-  'Wellness-Programme für Haustiere',
-  'Hydrotherapie für Katzen',
-  'Individuelle Trainingspläne für Tiere',
-  'Fitnesskurse für übergewichtige Haustiere'
+  'Mobile Physiotherapie für Hunde',
+  'Reha-Programme für verletzte Pferde',
+  'Online-Kurse für Hundephysio',
+  'Physio-Workshops für ältere Hunde',
+  'Hydrotherapie für Hunde und Pferde',
+  'Massageangebote speziell für Pferde',
+  'Ergonomische Pferde-Sattelunterlagen',
+  'Therapiegurte für die Hunde-Rehabilitation',
+  'Digitale Beratung für Pferdephysiotherapie',
+  'Mobile Reha-Services für Turnierpferde',
+  'Atemtherapie für Hunde mit Atemproblemen',
+  'Tiermassage-Techniken für Pferdebesitzer',
+  'Training für sportliche Höchstleistungen bei Pferden',
+  'Aquatherapie für verletzte Hunde',
+  'Bewegungsanalyse für Hunde mit Gelenkproblemen',
+  'Trainingspläne zur Muskelstärkung bei Pferden',
+  'Wellness-Programme für gestresste Pferde',
+  'Pfoten-Massagezentren für Hunde',
+  'Tierphysio-Workshops für Hundeschulen',
+  'Vorbereitungskurse für Pferde-Turniere'
 ];
 
 const EllensFirmenIdeen = () => {
@@ -41,7 +40,8 @@ const EllensFirmenIdeen = () => {
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-200 to-blue-200 p-4'>
-      <h1 className='text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center'>Ellens Firmen Ideen</h1>
+      <h1 className='text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-center'>Ellens Firmen Ideen</h1>
+      <p className='text-center text-md md:text-lg text-gray-700 mb-6'>Willkommen in der Ideenschmiede für Ellens zukünftiges Unternehmen. Hier entstehen kreative Konzepte rund um Hunde- und Pferdephysiotherapie. Lass dich inspirieren und entdecke neue Möglichkeiten!</p>
 
       <Button
         onClick={handleGenerateIdea}
