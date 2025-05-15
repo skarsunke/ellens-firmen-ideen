@@ -45,30 +45,30 @@ const EllensFirmenIdeen = () => {
 
       <button
         onClick={handleGenerateIdea}
-        className='bg-green-600 hover:bg-green-700 text-lg md:text-xl mb-4 text-white px-4 py-2 rounded-lg shadow-lg'
+        className='bg-green-600 hover:bg-green-700 text-lg md:text-xl mb-4 text-white px-5 py-3 rounded-lg shadow-lg'
       >
         Idee generieren
       </button>
 
       <button
         onClick={handleClear}
-        className='bg-red-600 hover:bg-red-700 text-sm md:text-base mb-4 text-white px-4 py-2 rounded-lg shadow-lg'
+        className='bg-red-600 hover:bg-red-700 text-sm md:text-base mb-4 text-white px-5 py-3 rounded-lg shadow-lg'
       >
         Tabelle leeren
       </button>
 
       <div className='mt-8 w-full md:w-1/2 overflow-auto border-2 border-gray-500 rounded-lg shadow-lg'>
         <h2 className='text-xl md:text-2xl mb-4 text-center'>Bisherige Ideen:</h2>
-        <table className='w-full border-collapse border-2 border-gray-500 rounded-lg'>
+        <table className='w-full border-collapse'>
           <thead>
             <tr>
-              <th className='border border-gray-300 p-2'>#</th>
-              <th className='border border-gray-300 p-2'>Idee</th>
+              <th className='border border-gray-300 p-2 bg-gray-200'>#</th>
+              <th className='border border-gray-300 p-2 bg-gray-200'>Idee</th>
             </tr>
           </thead>
           <tbody>
             {ideaList.map((idea, index) => (
-              <tr key={index}>
+              <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
                 <td className='border border-gray-300 p-2'>{index + 1}</td>
                 <td className='border border-gray-300 p-2'>{idea}</td>
               </tr>
