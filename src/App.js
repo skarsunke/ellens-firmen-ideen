@@ -47,8 +47,8 @@ const EllensFirmenIdeen = () => {
       <h1 className='text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center'>Ellens Firmen Ideen</h1>
 
       <motion.div
-        className='w-48 h-48 md:w-64 md:h-64 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4'
-        animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1.1, 1] }}
+        className='w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 border-4 border-white shadow-lg cursor-pointer'
+        animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.05, 1.05, 1] }}
         transition={{ duration: 0.5 }}
         onClick={handleSpin}
       >
