@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
