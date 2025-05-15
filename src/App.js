@@ -53,10 +53,11 @@ const EllensFirmenIdeen = () => {
       <h1 className='text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center'>Ellens Firmen Ideen</h1>
 
       <motion.div
-        className='w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 border-4 border-white shadow-lg cursor-pointer'
+        className='w-48 h-48 md:w-64 md:h-64 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 border-4 border-white shadow-lg cursor-pointer bg-purple-600'
         animate={isAnimating ? { rotate: [0, 20, -20, 0], scale: [1, 1.05, 1.05, 1] } : {}}
         transition={{ duration: 0.5 }}
         onClick={handleSpin}
+        style={{ background: 'radial-gradient(circle, #6b46c1, #553c9a)' }}
       >
         {selectedIdea || 'Kugel schütteln!'}
       </motion.div>
