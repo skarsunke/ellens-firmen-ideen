@@ -31,11 +31,17 @@ const ideas = [
 const EllensFirmenIdeen = () => {
   const [selectedIdea, setSelectedIdea] = useState('');
   const [ideaList, setIdeaList] = useState([]);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleSpin = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
     const idea = ideas[Math.floor(Math.random() * ideas.length)];
-    setSelectedIdea(idea);
-    setIdeaList((prevList) => [...prevList, idea]);
+    setTimeout(() => {
+      setSelectedIdea(idea);
+      setIdeaList((prevList) => [...prevList, idea]);
+      setIsAnimating(false);
+    }, 500);
   };
 
   const handleClear = () => {
@@ -48,7 +54,7 @@ const EllensFirmenIdeen = () => {
 
       <motion.div
         className='w-48 h-48 md:w-64 md:h-64 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 border-4 border-white shadow-lg cursor-pointer'
-        animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.05, 1.05, 1] }}
+        animate={isAnimating ? { rotate: [0, 20, -20, 0], scale: [1, 1.05, 1.05, 1] } : {}}
         transition={{ duration: 0.5 }}
         onClick={handleSpin}
       >
