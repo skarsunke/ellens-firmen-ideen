@@ -38,6 +38,7 @@ const EllensFirmenIdeen = () => {
     if (!spinning) {
       setSpinning(true);
       const randomDegree = 3600 + Math.floor(Math.random() * 360);
+      wheelRef.current.style.transition = '4s cubic-bezier(0.25, 1, 0.5, 1)';
       wheelRef.current.style.transform = `rotate(${randomDegree}deg)`;
       setTimeout(() => {
         const idea = ideas[Math.floor(Math.random() * ideas.length)];
@@ -61,7 +62,7 @@ const EllensFirmenIdeen = () => {
           className='w-72 h-72 md:w-96 md:h-96 border-4 border-gray-400 rounded-full overflow-hidden'
           style={{ transition: '4s ease-out' }}
         >
-          <img src='/images/wheel.png' alt='Glücksrad' className='w-full h-full' />
+          <img src='/images/wheel.png' alt='Glücksrad' className='w-full h-full' style={{ transformOrigin: '50% 50%' }} />
         </div>
         <div className='absolute top-[50%] left-[50%] w-0 h-0 border-l-[10px] border-l-transparent border-b-[20px] border-b-red-600 transform -translate-x-1/2 -translate-y-full'></div>
       </div>
