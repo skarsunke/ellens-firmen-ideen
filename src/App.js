@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Button } from './components/ui/button';
 
 const ideas = [
@@ -27,19 +26,13 @@ const ideas = [
 ];
 
 const EllensFirmenIdeen = () => {
-  const [selectedIdea, setSelectedIdea] = useState('');
   const [ideaList, setIdeaList] = useState([]);
-  const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleSpin = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    const idea = ideas[Math.floor(Math.random() * ideas.length)];
-    setTimeout(() => {
-      setSelectedIdea(idea);
-      setIdeaList((prevList) => [...prevList, idea]);
-      setIsAnimating(false);
-    }, 500);
+  const handleGenerateIdea = () => {
+    const remainingIdeas = ideas.filter(idea => !ideaList.includes(idea));
+    if (remainingIdeas.length === 0) return;
+    const newIdea = remainingIdeas[Math.floor(Math.random() * remainingIdeas.length)];
+    setIdeaList((prevList) => [...prevList, newIdea]);
   };
 
   const handleClear = () => {
@@ -50,27 +43,19 @@ const EllensFirmenIdeen = () => {
     <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-200 to-blue-200 p-4'>
       <h1 className='text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center'>Ellens Firmen Ideen</h1>
 
-      <motion.div
-        className='w-48 h-48 md:w-64 md:h-64 flex items-center justify-center text-white text-xl font-bold mb-4 border-4 border-white shadow-lg cursor-pointer'
-        animate={isAnimating ? { rotate: [0, 20, -20, 0], scale: [1, 1.05, 1.05, 1] } : {}}
-        transition={{ duration: 0.5 }}
-        onClick={handleSpin}
-        style={{
-          background: 'radial-gradient(circle at 50% 50%, #6b46c1, #553c9a)',
-          borderRadius: '50%'
-        }}
+      <Button
+        onClick={handleGenerateIdea}
+        className='bg-green-500 hover:bg-green-600 text-lg md:text-xl mb-4'
       >
-        {selectedIdea || 'Kugel schütteln!'}
-      </motion.div>
+        Idee generieren
+      </Button>
 
-      <div className='flex gap-2 mt-4'>
-        <Button
-          onClick={handleClear}
-          className='bg-red-500 hover:bg-red-600 text-sm md:text-base'
-        >
-          Tabelle leeren
-        </Button>
-      </div>
+      <Button
+        onClick={handleClear}
+        className='bg-red-500 hover:bg-red-600 text-sm md:text-base mb-4'
+      >
+        Tabelle leeren
+      </Button>
 
       <div className='mt-8 w-full md:w-1/2 overflow-auto'>
         <h2 className='text-xl md:text-2xl mb-4 text-center'>Bisherige Ideen:</h2>
