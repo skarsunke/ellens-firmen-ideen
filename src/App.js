@@ -45,19 +45,19 @@ const EllensFirmenIdeen = () => {
 
       <Button
         onClick={handleGenerateIdea}
-        className='bg-green-500 hover:bg-green-600 text-lg md:text-xl mb-4'
+        className='bg-green-600 hover:bg-green-700 text-lg md:text-xl mb-4 text-white'
       >
         Idee generieren
       </Button>
 
       <Button
         onClick={handleClear}
-        className='bg-red-500 hover:bg-red-600 text-sm md:text-base mb-4'
+        className='bg-red-600 hover:bg-red-700 text-sm md:text-base mb-4 text-white'
       >
         Tabelle leeren
       </Button>
 
-      <div className='mt-8 w-full md:w-1/2 overflow-auto'>
+      <div className='mt-8 w-full md:w-1/2 overflow-auto border border-gray-500 rounded-lg shadow-md'>
         <h2 className='text-xl md:text-2xl mb-4 text-center'>Bisherige Ideen:</h2>
         <table className='w-full border-collapse border border-gray-400'>
           <thead>
