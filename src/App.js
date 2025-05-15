@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card } from './components/ui/card';
+import { Button } from './components/ui/button';
 import { RotateCcw } from 'lucide-react';
 
 const ideas = [
