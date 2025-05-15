@@ -39,38 +39,38 @@ const EllensFirmenIdeen = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-200 to-blue-200 p-4'>
-      <h1 className='text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-center'>Ellens Firmen Ideen</h1>
-      <p className='text-center text-md md:text-lg text-gray-700 mb-6'>Willkommen in der Ideenschmiede für Ellens zukünftiges Unternehmen. Hier entstehen kreative Konzepte rund um Hunde- und Pferdephysiotherapie. Lass dich inspirieren und entdecke neue Möglichkeiten!</p>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: 'linear-gradient(to right, #a8dadc, #457b9d)', padding: '20px' }}>
+      <h1 style={{ fontSize: '2.5em', marginBottom: '10px', color: '#1d3557', textAlign: 'center' }}>Ellens Firmen Ideen</h1>
+      <p style={{ textAlign: 'center', fontSize: '1.2em', color: '#457b9d', marginBottom: '20px' }}>Willkommen in der Ideenschmiede für Ellens zukünftiges Unternehmen. Hier entstehen kreative Konzepte rund um Hunde- und Pferdephysiotherapie. Lass dich inspirieren und entdecke neue Möglichkeiten!</p>
 
       <button
         onClick={handleGenerateIdea}
-        className='bg-green-600 hover:bg-green-700 text-lg md:text-xl mb-4 text-white px-5 py-3 rounded-lg shadow-lg'
+        style={{ backgroundColor: '#2a9d8f', color: '#fff', padding: '10px 20px', borderRadius: '8px', border: 'none', fontSize: '1.2em', marginBottom: '10px', cursor: 'pointer', boxShadow: '2px 2px 5px rgba(0,0,0,0.2)' }}
       >
         Idee generieren
       </button>
 
       <button
         onClick={handleClear}
-        className='bg-red-600 hover:bg-red-700 text-sm md:text-base mb-4 text-white px-5 py-3 rounded-lg shadow-lg'
+        style={{ backgroundColor: '#e63946', color: '#fff', padding: '10px 20px', borderRadius: '8px', border: 'none', fontSize: '1.2em', marginBottom: '20px', cursor: 'pointer', boxShadow: '2px 2px 5px rgba(0,0,0,0.2)' }}
       >
         Tabelle leeren
       </button>
 
-      <div className='mt-8 w-full md:w-1/2 overflow-auto border-2 border-gray-500 rounded-lg shadow-lg'>
-        <h2 className='text-xl md:text-2xl mb-4 text-center'>Bisherige Ideen:</h2>
-        <table className='w-full border-collapse'>
+      <div style={{ width: '100%', maxWidth: '600px', overflowX: 'auto', border: '2px solid #457b9d', borderRadius: '8px', boxShadow: '2px 2px 10px rgba(0,0,0,0.1)' }}>
+        <h2 style={{ fontSize: '1.5em', textAlign: 'center', color: '#1d3557', margin: '10px 0' }}>Bisherige Ideen:</h2>
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr>
-              <th className='border border-gray-300 p-2 bg-gray-200'>#</th>
-              <th className='border border-gray-300 p-2 bg-gray-200'>Idee</th>
+              <th style={{ border: '1px solid #457b9d', padding: '10px', backgroundColor: '#a8dadc', color: '#1d3557' }}>#</th>
+              <th style={{ border: '1px solid #457b9d', padding: '10px', backgroundColor: '#a8dadc', color: '#1d3557' }}>Idee</th>
             </tr>
           </thead>
           <tbody>
             {ideaList.map((idea, index) => (
-              <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
-                <td className='border border-gray-300 p-2'>{index + 1}</td>
-                <td className='border border-gray-300 p-2'>{idea}</td>
+              <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#f1faee' : '#e9ecef' }}>
+                <td style={{ border: '1px solid #457b9d', padding: '10px' }}>{index + 1}</td>
+                <td style={{ border: '1px solid #457b9d', padding: '10px' }}>{idea}</td>
               </tr>
             ))}
           </tbody>
