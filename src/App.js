@@ -41,7 +41,7 @@ const EllensFirmenIdeen = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', background: 'linear-gradient(to right, #a8dadc, #457b9d)', padding: '20px' }}>
       <h1 style={{ fontSize: '2.5em', marginBottom: '10px', color: '#1d3557', textAlign: 'center' }}>Ellens Firmen Ideen</h1>
-      <p style={{ textAlign: 'center', fontSize: '1.2em', color: '#457b9d', marginBottom: '20px' }}>Willkommen in der Ideenschmiede für Ellens zukünftiges Unternehmen. Hier entstehen kreative Konzepte rund um Hunde- und Pferdephysiotherapie. Lass dich inspirieren und entdecke neue Möglichkeiten!</p>
+      <p style={{ textAlign: 'center', fontSize: '1.2em', color: '#ffffff', marginBottom: '20px', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}> Willkommen in der Ideenschmiede für Ellens zukünftiges Unternehmen. Hier entstehen kreative Konzepte rund um Hunde- und Pferdephysiotherapie. Lass dich inspirieren und entdecke neue Möglichkeiten!</p>
 
       <button
         onClick={handleGenerateIdea}
