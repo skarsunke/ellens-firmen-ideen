@@ -52,37 +52,34 @@ const EllensFirmenIdeen = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-200 to-blue-200'>
-      <h1 className='text-4xl font-bold mb-8'>Ellens Firmen Ideen</h1>
-      <Card className='w-96 h-96 flex items-center justify-center relative'>
+    <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-200 to-blue-200 p-4'>
+      <h1 className='text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center'>Ellens Firmen Ideen</h1>
+      <Card className='w-72 h-72 md:w-96 md:h-96 flex items-center justify-center relative'>
         <motion.div
           animate={{ rotate: spinning ? 360 : 0 }}
           transition={{ duration: 2, ease: 'easeInOut' }}
-          className='w-64 h-64 bg-white rounded-full border-4 border-gray-300 flex items-center justify-center'
+          className='w-60 h-60 md:w-64 md:h-64 bg-white rounded-full border-4 border-gray-300 flex items-center justify-center'
         >
-          <span className='text-xl font-semibold'>{spinning ? 'Dreht sich...' : selectedIdea || 'Drücke den Hebel!'}</span>
+          <span className='text-lg md:text-xl font-semibold'>{spinning ? 'Dreht sich...' : selectedIdea || 'Drücke den Hebel!'}</span>
         </motion.div>
-        <div className='flex gap-4 absolute bottom-[-3rem]'>
+        <div className='flex gap-2 md:gap-4 absolute bottom-[-3rem]'>
           <Button
             onClick={handleSpin}
-            className='bg-green-500 hover:bg-green-600'
+            className='bg-green-500 hover:bg-green-600 text-sm md:text-base'
           >
-            <RotateCcw className='mr-2' /> Hebel ziehen
+            <RotateCcw className='mr-1 md:mr-2' /> Hebel ziehen
           </Button>
           <Button
             onClick={handleClear}
-            className='bg-red-500 hover:bg-red-600'
+            className='bg-red-500 hover:bg-red-600 text-sm md:text-base'
           >
             Tabelle leeren
           </Button>
         </div>
       </Card>
 
-      
-        
-
-      <div className='mt-8 w-1/2'>
-        <h2 className='text-2xl mb-4'>Bisherige Ideen:</h2>
+      <div className='mt-8 w-full md:w-1/2 overflow-auto'>
+        <h2 className='text-xl md:text-2xl mb-4 text-center'>Bisherige Ideen:</h2>
         <table className='w-full border-collapse border border-gray-400'>
           <thead>
             <tr>
@@ -99,10 +96,8 @@ const EllensFirmenIdeen = () => {
             ))}
           </tbody>
         </table>
-        
-      
+      </div>
     </div>
-  </div>
   );
 };
 
